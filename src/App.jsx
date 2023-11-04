@@ -1,31 +1,25 @@
 import "./style/App.scss";
 import "./style/reset.css";
 import { useState } from "react";
+import posts from "./data/posts.json";
+import Post from "./Components/Post/Post";
 
 function App() {
-  const [flag, setFlag] = useState(false);
+  const [arr, setArr] = useState(posts);
 
-  function changeFlag() {
-    setFlag(!flag);
+  function delPost(id) {
+    const newArr = [...arr];
+    const resArr = newArr.filter((item) => item.id != id);
+    setArr(resArr);
   }
 
-  function getRender() {
-    if (flag === false) {
-      return <button onClick={changeFlag}>Открыть</button>;
-    } else {
-      return (
-        <div className="block">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-            suscipit.
-          </p>
-          <button onClick={changeFlag}>Закрыть</button>
-        </div>
-      );
-    }
-  }
-
-  return <div className="App">{getRender()}</div>;
+  return (
+    <div className="App">
+      {arr.map((item, index) => (
+        <Post object={item} delPost={delPost} key={index} addPost={addPost} />
+      ))}
+    </div>
+  );
 }
 
 export default App;
