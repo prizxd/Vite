@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       {arr.map((item, index) => (
-        <Post object={item} delPost={delPost} key={index} addPost={addPost} />
+        <Post object={item} delPost={delPost} key={index} />
       ))}
     </div>
   );
