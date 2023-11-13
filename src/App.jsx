@@ -1,12 +1,10 @@
 import "./style/App.scss";
 import "./style/reset.css";
 import { useState } from "react";
-import posts from "./data/posts.json";
-import Post from "./Components/Post/Post";
+import Form from "./Components/Form/Form";
+import Posts from "./Components/Posts/Posts";
 
 function App() {
-  const [arr, setArr] = useState(posts);
-
   function delPost(id) {
     const newArr = [...arr];
     const resArr = newArr.filter((item) => item.id != id);
@@ -15,9 +13,8 @@ function App() {
 
   return (
     <div className="App">
-      {arr.map((item, index) => (
-        <Post object={item} delPost={delPost} key={index} />
-      ))}
+      <Form />
+      <Posts />
     </div>
   );
 }

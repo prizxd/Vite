@@ -1,11 +1,9 @@
 .App {
-  width: 1500px;
-  height: 800px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-basis: 0;
-  flex-wrap: wrap;
+  justify-content: center;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
 }
