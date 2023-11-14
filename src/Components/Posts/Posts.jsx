@@ -2,27 +2,14 @@ import "./posts.scss";
 
 export default function Posts(props) {
   return (
-    <div className="parent">
-      <button type="button">Показать заказы</button>
-      <div className="posts">
-        <div className="post-1">
-          <h1>номер поста</h1>
-          <p>Фамилия, Имя</p>
-          <p>номер</p>
-          <p>email</p>
-          <p>address</p>
-        </div>
-      </div>
+    <div className="post">
+      <h1>Offer number: {Math.floor(Math.random(101) * 10).toFixed()}</h1>
+      <p>
+        Who: {props.obj.surName} {props.obj.name}
+      </p>
+      <p>Number: {props.obj.number}</p>
+      <p>Email: {props.obj.email}</p>
+      <p>Address: {props.obj.address}</p>
     </div>
-    // <div className="post-block">
-    //   <div className="post-title">
-    //     <h1>{props.object.title}</h1>
-    //   </div>
-    //   <div className="post-body">
-    //     <p onClick={() => props.delPost(props.object.id)}>
-    //       {props.object.body}
-    //     </p>
-    //   </div>
-    // </div>
   );
 }

@@ -5,16 +5,44 @@ import Form from "./Components/Form/Form";
 import Posts from "./Components/Posts/Posts";
 
 function App() {
-  function delPost(id) {
-    const newArr = [...arr];
-    const resArr = newArr.filter((item) => item.id != id);
-    setArr(resArr);
-  }
+  const [arr, setArr] = useState("");
+  const [flag, setFlag] = useState(false);
 
+  const addPost = (name, surName, number, email, address) => {
+    setArr([
+      ...arr,
+      {
+        id: Date.now(),
+        name,
+        surName,
+        number,
+        email,
+        address,
+      },
+    ]);
+  };
+
+  function changeFlag() {
+    setFlag(!flag);
+  }
+  function getRender() {
+    if (flag === true) {
+      return (
+        <div className="parent">
+          {arr.map((item) => (
+            <Posts obj={item} key={item} />
+          ))}
+        </div>
+      );
+    }
+  }
   return (
     <div className="App">
-      <Form />
-      <Posts />
+      <Form addPost={addPost} />
+      <button type="button" onClick={changeFlag}>
+        Показать заказы
+      </button>
+      {getRender()}
     </div>
   );
 }

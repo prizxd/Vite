@@ -1,3 +1,7 @@
+* {
+  font-family: "Montserrat", sans-serif !important;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -6,4 +10,34 @@
   width: 1200px;
   height: 100%;
   margin: auto;
+}
+
+button {
+  width: 255px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 45px;
+  background: #181818;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: #ffe100;
+  color: #000;
+}
+
+.parent {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }

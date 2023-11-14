@@ -6,7 +6,6 @@ export default function Form(props) {
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
-
   return (
     <div className="header">
       <div className="wrapper">
@@ -66,9 +65,14 @@ export default function Form(props) {
           <div className="block_4">
             <button
               type="button"
-              onClick={(event) =>
-                console.log(name, surName, number, email, address)
-              }
+              onClick={() => {
+                props.addPost(name, surName, number, email, address);
+                setName("");
+                setSurName("");
+                setNumber("");
+                setAddress("");
+                setEmail("");
+              }}
             >
               ОФОРМИТЬ ЗАКАЗ
             </button>
