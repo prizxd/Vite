@@ -12,7 +12,6 @@ function App() {
     setArr([
       ...arr,
       {
-        id: Date.now(),
         name,
         surName,
         number,

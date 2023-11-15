@@ -3,7 +3,6 @@ import "./posts.scss";
 export default function Posts(props) {
   return (
     <div className="post">
-      <h1>Offer number: {Math.floor(Math.random(101) * 10).toFixed()}</h1>
       <p>
         Who: {props.obj.surName} {props.obj.name}
       </p>
