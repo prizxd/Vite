@@ -1,47 +1,17 @@
-import "./style/App.scss";
-import "./style/reset.css";
-import { useState } from "react";
-import Form from "./Components/Form/Form";
-import Posts from "./Components/Posts/Posts";
+import Header from "./Components/Header/Header";
+import MainPart1 from "./Components/Main/MainPart1/MainPart1";
+import MainPart2 from "./Components/Main/MainPart2/MainPart2";
+import "./stylesDefault/App.scss";
+import "./stylesDefault/reset.css";
 
 function App() {
-  const [arr, setArr] = useState("");
-  const [flag, setFlag] = useState(false);
-
-  const addPost = (name, surName, number, email, address) => {
-    setArr([
-      ...arr,
-      {
-        name,
-        surName,
-        number,
-        email,
-        address,
-      },
-    ]);
-  };
-
-  function changeFlag() {
-    setFlag(!flag);
-  }
-  function getRender() {
-    if (flag === true) {
-      return (
-        <div className="parent">
-          {arr.map((item) => (
-            <Posts obj={item} key={item} />
-          ))}
-        </div>
-      );
-    }
-  }
   return (
     <div className="App">
-      <Form addPost={addPost} />
-      <button type="button" onClick={changeFlag}>
-        Показать заказы
-      </button>
-      {getRender()}
+      <Header />
+      <main>
+        <MainPart1 />
+        <MainPart2 />
+      </main>
     </div>
   );
 }

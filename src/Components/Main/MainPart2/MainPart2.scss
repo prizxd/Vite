@@ -1,0 +1,124 @@
+.MainPart2 {
+  display: block;
+  background: #ffffff;
+  padding: 40px 144px 48px 144px;
+  .first-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      color: #4d4d4d;
+      font-family: Inter;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 44px;
+    }
+    p {
+      margin-top: 8px;
+      color: #717171;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    ul {
+      padding: 25px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+      img {
+        // width: 40px;
+        // height: 40px;
+      }
+    }
+  }
+  .second-block {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 8px;
+    h2 {
+      width: 542px;
+      font-family: Inter;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 44px;
+      color: #4d4d4d;
+      text-align: center;
+    }
+    p {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: #717171;
+      margin-bottom: 16px;
+    }
+  }
+  .third-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    .card-1,
+    .card-2,
+    .card-3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 299px;
+      padding: 24px 32px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.2);
+    }
+    img {
+      width: 65;
+      height: 56;
+    }
+    h3 {
+      color: #4d4d4d;
+      width: 267px;
+      height: 72px;
+      margin-top: 16px;
+      font-family: Inter;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: center;
+    }
+    p {
+      margin-top: 8px;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      color: #717171;
+      text-align: center;
+      width: 240px;
+    }
+    .card-3 {
+      h3 {
+        width: 231px;
+      }
+    }
+    .card-1,
+    .card-3 {
+      p {
+        width: 251px;
+      }
+    }
+  }
+}
