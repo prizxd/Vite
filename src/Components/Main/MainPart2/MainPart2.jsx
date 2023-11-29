@@ -46,6 +46,119 @@ export default function MainPart2() {
           </p>
         </div>
       </div>
+      <div className="fourth-block">
+        <div className="left-side">
+          <img src="/Frame 35.svg" alt="" />
+        </div>
+        <div className="right-side">
+          <h2>The unseen of spending three years at Pixelgrade</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+            Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+            tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+            Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+            elementum pulvinar odio.
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div className="fifth-block">
+        <div className="left-side">
+          <h2>
+            Helping a local <span>business reinvent itself</span>
+          </h2>
+          <p>We reached here with our hard work and dedication</p>
+        </div>
+        <div className="right-side">
+          <div className="right-side-1">
+            <div className="block">
+              <img src="/Icon.png" alt="" />
+              <div className="text-block">
+                <h3>2,245,341</h3>
+                <p>Members</p>
+              </div>
+            </div>
+            <div className="block">
+              <img src="/Icon-2.png" alt="" />
+              <div className="text-block">
+                <h3>828,867</h3>
+                <p>Event Bookings</p>
+              </div>
+            </div>
+          </div>
+          <div className="right-side-2">
+            <div className="block">
+              <img src="/Icon-1.png" alt="" />
+              <div className="text-block">
+                <h3>46,328</h3>
+                <p>Clubs</p>
+              </div>
+            </div>
+            <div className="block">
+              <img src="/Icon-3.png" alt="" />
+              <div className="text-block">
+                <h3>1,926,436</h3>
+                <p>Payments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="sixth-block">
+        <div className="left-side">
+          <img src="/pana.svg" alt="" />
+        </div>
+        <div className="right-side">
+          <h2>How to design your site footer like we did</h2>
+          <p>
+            Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+            augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque
+            elit erat a magna. Donec quis erat at libero ultrices mollis. In hac
+            habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi
+            facilisis finibus. In euismod augue vitae nisi ultricies, non
+            aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus
+            efficitur quis massa. Praesent felis est, finibus et nisi ac,
+            hendrerit venenatis libero. Donec consectetur faucibus ipsum id
+            gravida.
+          </p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div className="seventh-block">
+        <div className="left-side">
+          <img src="/image 9.png" alt="" />
+        </div>
+        <div className="right-side">
+          <p>
+            Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+            lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
+            enim metus. Vivamus sed libero ornare, tristique quam in, gravida
+            enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit
+            at ligula molestie, nec molestie mi blandit. Suspendisse cursus
+            tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse
+            eget lorem eu turpis vestibulum pretium. Suspendisse potenti.
+            Quisque malesuada enim sapien, vitae placerat ante feugiat eget.
+            Quisque vulputate odio neque, eget efficitur libero condimentum id.
+            Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+          </p>
+          <h4>Tim Smith</h4>
+          <p className="small">British Dragon Boat Racing Association</p>
+          <div className="block">
+            <ul>
+              <img src="/Logo011.svg" alt=""></img>
+              <img src="/Logo-1.svg" alt=""></img>
+              <img src="/Logo-2.svg" alt=""></img>
+              <img src="/Logo-3.svg" alt=""></img>
+              <img src="/Logo-4.svg" alt=""></img>
+              <img src="/Logo-5.svg" alt=""></img>
+            </ul>
+            <button>
+              Meet all customers <img src="/Right.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
