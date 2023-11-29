@@ -159,6 +159,57 @@ export default function MainPart2() {
           </div>
         </div>
       </div>
+      <div className="eighth-block">
+        <div className="block-top">
+          {" "}
+          <h2>Caring is the new marketing</h2>
+          <p>
+            The Nexcent blog is the best place to read about the latest
+            membership insights, trends and more. See who's joining the
+            community, read about how our community are increasing their
+            membership income and lot's more.​
+          </p>
+        </div>
+
+        <div className="block-cards">
+          <div className="card">
+            <img src="/1.png" alt="" />
+            <div className="block">
+              <p>Creating Streamlined Safeguarding Processes with OneRen</p>
+              <button>
+                Read more <img src="/Right.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div className="card">
+            <img src="/2.png" alt="" />
+            <div className="block">
+              <p>
+                What are your safeguarding responsibilities and how can you
+                manage them?
+              </p>
+              <button>
+                Read more <img src="/Right.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div className="card">
+            <img src="/3.png" alt="" />
+            <div className="block">
+              <p>Revamping the Membership Model with Triathlon Australia</p>
+              <button>
+                Read more <img src="/Right.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="ninth-block">
+        <h1>Pellentesque suscipit fringilla libero eu.</h1>
+        <button>
+          Get a Demo <img src="/Down.svg" alt="" />
+        </button>
+      </div>
     </div>
   );
 }

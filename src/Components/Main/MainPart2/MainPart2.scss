@@ -3,6 +3,24 @@
   background: #ffffff;
   padding: 40px 0 0;
 
+  @keyframes button {
+    0% {
+      background: #4caf4f;
+    }
+    25% {
+      background: #469f48;
+    }
+    50% {
+      background: #439745;
+    }
+    75% {
+      background: #419343;
+    }
+    100% {
+      background: #3f8f41;
+    }
+  }
+
   .first-block {
     display: flex;
     align-items: center;
@@ -309,7 +327,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-
+    margin-bottom: 48px;
     padding: 32px 144px;
     .left-side {
       img {
@@ -354,10 +372,6 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          img {
-            // width: 40px;
-            // height: 40px;
-          }
         }
         button {
           display: flex;
@@ -376,9 +390,142 @@
           line-height: 28px;
           img {
             width: 14px;
-            height: 8px;
+            height: 14px;
           }
         }
+      }
+    }
+  }
+  .eighth-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 144px;
+    margin-bottom: 95px;
+    .block-top {
+      h2 {
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px;
+        color: #4d4d4d;
+        text-align: center;
+      }
+      p {
+        margin: 8px 0 16px;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: #717171;
+        text-align: center;
+        width: 628px;
+      }
+    }
+    .block-cards {
+      margin-bottom: 80px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .card {
+        position: relative;
+        img {
+          width: 368px;
+          height: 286px;
+        }
+        .block {
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 80px);
+          position: absolute;
+          border-radius: 8px;
+          padding: 16px;
+          background: #f5f7fa;
+          box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.4);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          row-gap: 16px;
+          p {
+            width: 285px;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            color: #717171;
+            text-align: center;
+          }
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 8px;
+            flex-shrink: 0;
+            background: 0;
+            border: 0;
+            width: 207px;
+            color: #4caf4f;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            img {
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ninth-block {
+    padding: 32px 0;
+    background: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 32px;
+    h1 {
+      font-family: Inter;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 76px;
+      color: #263238;
+      width: 887px;
+      text-align: center;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 8px;
+      flex-shrink: 0;
+      margin-top: 32px;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      color: #fff;
+      border-radius: 4px;
+      border: 0;
+      background: #4caf4f;
+      padding: 14px 32px 14px 32px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+      button:hover {
+        animation: button 1ms infinite;
       }
     }
   }
