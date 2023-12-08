@@ -1,4 +1,23 @@
 $defaultColor: #f5f7fa;
+
+@keyframes mainButtons {
+  0% {
+    background: #4caf4f;
+  }
+  100% {
+    background: #253f2b;
+  }
+}
+
+@keyframes mainButtons1 {
+  0% {
+    background: #253f2b;
+  }
+  100% {
+    background: #4caf4f;
+  }
+}
+
 .MainPart1 {
   background: $defaultColor;
   padding: 96px 144px;
@@ -45,6 +64,10 @@ $defaultColor: #f5f7fa;
       border: 0;
       background: #4caf4f;
       padding: 14px 32px 14px 32px;
+      animation: mainButtons1 0.5s alternate forwards;
+    }
+    button:hover {
+      animation: mainButtons 0.5s alternate forwards;
     }
   }
   .r-side {

@@ -1,5 +1,64 @@
 $defaultColor: #f5f7fa;
 
+@keyframes forButtons {
+  0% {
+    border-bottom: 2px #18191f00 solid;
+  }
+  100% {
+    border-bottom: 2px #4caf4f solid;
+  }
+}
+
+@keyframes forButtons1 {
+  0% {
+    border-bottom: 2px #4caf4f solid;
+  }
+  100% {
+    border-bottom: 2px #18191f00 solid;
+  }
+}
+
+@keyframes mainButtons {
+  0% {
+    background: #4caf4f;
+  }
+  100% {
+    background: #253f2b;
+  }
+}
+
+@keyframes mainButtons1 {
+  0% {
+    background: #253f2b;
+  }
+  100% {
+    background: #4caf4f;
+  }
+}
+
+@keyframes mainButtonsColor {
+  0% {
+    color: #4caf4f;
+  }
+  100% {
+    color: #253f2b;
+  }
+}
+
+@keyframes mainButtonsColor1 {
+  0% {
+    color: #253f2b;
+  }
+  100% {
+    color: #4caf4f;
+  }
+}
+.reg-pages {
+  a {
+    text-decoration: none;
+  }
+}
+
 header {
   height: 100%;
   height: 84px;
@@ -28,6 +87,10 @@ header {
       color: #18191f;
       outline: 0;
       text-decoration: none;
+      animation: forButtons1 0.5s forwards;
+    }
+    a:hover {
+      animation: forButtons 0.5s forwards;
     }
   }
   .reg-pages {
@@ -49,9 +112,10 @@ header {
       padding: 10px 20px;
       align-items: center;
       background: $defaultColor;
+      animation: mainButtonsColor1 0.5s forwards;
     }
     .header-button-1:hover {
-      color: black;
+      animation: mainButtonsColor 0.5s forwards;
     }
     .header-button-2 {
       color: $defaultColor;
@@ -66,9 +130,10 @@ header {
       padding: 10px 20px;
       align-items: center;
       background: #4caf4f;
+      animation: mainButtons1 0.5s forwards;
     }
     .header-button-2:hover {
-      background: #1d421e;
+      animation: mainButtons 0.5s forwards;
     }
   }
 }

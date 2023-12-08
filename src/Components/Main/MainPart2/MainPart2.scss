@@ -3,21 +3,39 @@
   background: #ffffff;
   padding: 40px 0 0;
 
-  @keyframes button {
+  @keyframes mainButtons {
     0% {
       background: #4caf4f;
     }
-    25% {
-      background: #469f48;
+    100% {
+      background: #253f2b;
     }
-    50% {
-      background: #439745;
-    }
-    75% {
-      background: #419343;
+  }
+
+  @keyframes mainButtons1 {
+    0% {
+      background: #253f2b;
     }
     100% {
-      background: #3f8f41;
+      background: #4caf4f;
+    }
+  }
+
+  @keyframes mainButtonsColor {
+    0% {
+      color: #4caf4f;
+    }
+    100% {
+      color: #253f2b;
+    }
+  }
+
+  @keyframes mainButtonsColor1 {
+    0% {
+      color: #253f2b;
+    }
+    100% {
+      color: #4caf4f;
     }
   }
 
@@ -187,6 +205,10 @@
         color: #ffffff;
         border-radius: 4px;
         border: 0;
+        animation: mainButtons1 0.5s forwards;
+      }
+      button:hover {
+        animation: mainButtons 0.5s forwards;
       }
     }
   }
@@ -319,6 +341,10 @@
         color: #ffffff;
         border-radius: 4px;
         border: 0;
+        animation: mainButtons1 0.5s forwards;
+      }
+      button:hover {
+        animation: mainButtons 0.5s forwards;
       }
     }
   }
@@ -392,6 +418,10 @@
             width: 14px;
             height: 14px;
           }
+          animation: mainButtonsColor1 0.5s forwards;
+        }
+        button:hover {
+          animation: mainButtonsColor 0.5s forwards;
         }
       }
     }
@@ -480,6 +510,10 @@
               width: 14px;
               height: 14px;
             }
+            animation: mainButtonsColor1 0.5s forwards;
+          }
+          button:hover {
+            animation: mainButtonsColor 0.5s forwards;
           }
         }
       }
@@ -524,9 +558,11 @@
         width: 16px;
         height: 16px;
       }
-      button:hover {
-        animation: button 1ms infinite;
-      }
+
+      animation: mainButtons1 0.5s forwards;
+    }
+    button:hover {
+      animation: mainButtons 0.5s forwards;
     }
   }
 }
