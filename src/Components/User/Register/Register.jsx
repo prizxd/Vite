@@ -1,10 +1,40 @@
 import "./register.scss";
-import { useState, React } from "react";
+import { React } from "react";
 import { Link } from "react-router-dom";
 export default function Register(props) {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    props.setNewUser((prevUser) => ({
+      ...prevUser,
+      [name]: value,
+    }));
+  };
+
+  const handleAddUser = (e) => {
+    e.preventDefault();
+    const userExists = props.userData.some(
+      (user) => user.email === props.newUser.email
+    );
+    if (!userExists) {
+      props.setUserData((prevData) => [
+        ...prevData,
+        {
+          name: props.newUser.name,
+          email: props.newUser.email,
+          password: props.newUser.password,
+        },
+      ]);
+
+      alert("Новый пользователь добавлен.");
+      props.setNewUser({ name: "", email: "", password: "" });
+    } else {
+      alert("Пользователь уже существует");
+    }
+  };
+
   return (
     <div className="wrapper">
-      <form className="form" onSubmit={props.handleRegistration}>
+      <form className="form">
         <p className="title">Sign Up </p>
         <p className="message">Signup now and get full access to our app. </p>
         <div className="flex">
@@ -15,20 +45,19 @@ export default function Register(props) {
               placeholder=""
               type="text"
               className="input"
-              onChange={props.handleInputChange}
-              value={props.formData.name}
+              onChange={handleInputChange}
+              value={props.newUser.name}
             />
             <span>Firstname</span>
           </label>
           <label>
             <input
-              name="secondname"
+              name="surname"
               required=""
               placeholder=""
               type="text"
               className="input"
-              onChange={props.handleInputChange}
-              value={props.formData.secondname}
+              onChange={handleInputChange}
             />
             <span>Lastname</span>
           </label>
@@ -40,8 +69,8 @@ export default function Register(props) {
             placeholder=""
             type="email"
             className="input"
-            onChange={props.handleInputChange}
-            value={props.formData.email}
+            onChange={handleInputChange}
+            value={props.newUser.email}
           />
           <span>Email</span>
         </label>
@@ -52,12 +81,14 @@ export default function Register(props) {
             placeholder=""
             type="password"
             className="input"
-            onChange={props.handleInputChange}
-            value={props.formData.password}
+            onChange={handleInputChange}
+            value={props.newUser.password}
           />
           <span>Password</span>
         </label>
-        <button className="submit">Submit</button>
+        <button className="submit" onClick={handleAddUser}>
+          Submit
+        </button>
         <p className="signin">
           Already have an acount ? <Link to="/login">Login</Link>
         </p>

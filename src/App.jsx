@@ -6,39 +6,40 @@ import "./stylesDefault/reset.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { useState, React } from "react";
 function App() {
-  const [formData, setFormData] = useState({
+  const [userData, setUserData] = useState([
+    { name: "a", email: "a@a.com", password: "123" },
+    { name: "b", email: "b@b.com", password: "qwe" },
+  ]);
+
+  const [newUser, setNewUser] = useState({
     name: "",
-    secondname: "",
     email: "",
     password: "",
   });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleRegistration = (e) => {
-    e.preventDefault();
-    console.log("Registration Form Data:", formData);
-  };
-
   return (
     <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={<Wrapper />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/login"
+            element={
+              <LoginPage
+                userData={userData}
+                newUser={newUser}
+                setNewUser={setNewUser}
+                setUserData={setUserData}
+              />
+            }
+          />
           <Route
             path="/registration"
             element={
               <Register
-                handleRegistration={handleRegistration}
-                formData={FormData}
-                handleInputChange={handleInputChange}
+                userData={userData}
+                newUser={newUser}
+                setNewUser={setNewUser}
+                setUserData={setUserData}
               />
             }
           />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MainPart1.scss";
 export default function MainPart1() {
   return (
@@ -10,7 +11,9 @@ export default function MainPart1() {
         <p>
           Where to grow your business as a photographer: site or social media?
         </p>
-        <button>Register</button>
+        <Link to="/registration">
+          <button>Register</button>
+        </Link>
       </div>
       <div className="r-side">
         <img src="/Illustration.svg" alt="" />

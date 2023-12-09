@@ -1,18 +1,33 @@
 import { Link } from "react-router-dom";
-import { useState, React } from "react";
+import { React } from "react";
 import "./loginPage.scss";
-export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+export default function LoginPage(props) {
+  const handleInputChange = (e) => {
+    console.log("1");
+    const { name, value } = e.target;
+    props.setNewUser((prevUser) => ({
+      ...prevUser,
+      [name]: value,
+    }));
+  };
 
-  const handleLogin = (e) => {
+  const handleCheckUser = (e) => {
     e.preventDefault();
-    console.log({ Email: email, Password: password });
+    console.log("2");
+    const userExists = props.userData.some(
+      (user) => user.email === props.newUser.email
+    );
+    if (userExists) {
+      alert(`Вы вошли.`);
+      props.setNewUser({ name: "", email: "", password: "" });
+    } else {
+      alert(`Пользователь не найден.`);
+    }
   };
   return (
     <div className="wrapper">
-      <form className="form" onSubmit={handleLogin}>
-        <p className="title">Login </p>
+      <form className="form">
+        <p className="title">Login</p>
         <div className="flex"></div>
         <label>
           <input
@@ -20,8 +35,8 @@ export default function LoginPage() {
             placeholder=""
             type="email"
             className="input"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+            onChange={handleInputChange}
+            value={props.newUser.email}
           />
           <span>Email</span>
         </label>
@@ -31,12 +46,12 @@ export default function LoginPage() {
             placeholder=""
             type="password"
             className="input"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
+            onChange={handleInputChange}
+            value={props.newUser.password}
           />
           <span>Password</span>
         </label>
-        <button className="submit" type="submit">
+        <button className="submit" type="submit" onClick={handleCheckUser}>
           Submit
         </button>
         <p className="signup">
