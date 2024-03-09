@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
-      alert("Вы вошли!");
+      window.location.href = "/profile";
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;

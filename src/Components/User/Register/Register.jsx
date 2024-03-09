@@ -12,7 +12,7 @@ function Register() {
     e.preventDefault();
     try {
       await firebase.auth().createUserWithEmailAndPassword(email, password);
-      alert("Registration successful");
+      window.location.href = "/profile";
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
