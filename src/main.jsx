@@ -1,3 +1,8 @@
+import { initializeApp } from "firebase/app";
+import firebaseConfig from "../firebaseConfig.js";
+import firebase from "firebase/compat/app";
+firebase.initializeApp(firebaseConfig);
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
