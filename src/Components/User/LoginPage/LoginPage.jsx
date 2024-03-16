@@ -3,22 +3,24 @@ import { Link } from "react-router-dom";
 import "./loginPage.scss";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
-      window.location.href = "/profile";
+      navigate("/profile");
     } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert({ errorMessage });
+      setError(error);
     }
   };
+
   return (
     <div className="wrapper">
       <form className="form" onSubmit={handleLogin}>
@@ -48,6 +50,7 @@ function Login() {
           />
           <span>Password</span>
         </label>
+        {error && <p>{error.message}</p>}
         <button className="submit" type="submit">
           Submit
         </button>

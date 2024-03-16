@@ -7,9 +7,9 @@ export default function Header() {
     <header>
       <img src="/Logo.svg" alt="Logo.svg" />
       <nav>
-        <a href="#" className="header-li">
+        <Link href="#" className="header-li">
           Home
-        </a>
+        </Link>
         <a href="#" className="header-li">
           Service
         </a>
